@@ -1,0 +1,322 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<br id="inicio"><br><br><br class="mb-5">
+<hr class="mt-3">
+<div id="carouselExampleInterval" style="margin-top: -16px" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <img src="{{ url_for('static', filename='barril-lager.jpg')}}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="12000">
+            <img src="{{ url_for('static', filename='barril-puro-malte(premium).jpg')}}" class="d-block w-100"
+                 alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="12000">
+            <img src="{{ url_for('static', filename='barril-pilsen.jpg')}}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="12000">
+            <img src="{{ url_for('static', filename='barril-haller.jpg')}}" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<hr class="m-0 p-0">
+<div class="container mt-4" id="Ecobier"><h3 class="cor_texto">A ECOBIER</h3></div>
+<div class="container texto mt-4 justificar mb-5" style="letter-spacing: 1px;">
+    <span id="lager"></span>
+    Mais que um produto ou uma marca, a Ecobier é uma cerveja de altíssimo padrão. Com característica leve e cremosa, é
+    resultado de um processo tradicional de fermentação e maturação. Também utiliza em sua fórmula malte e lúpulos
+    especiais da região de Hallertau (Alemanha), o que lhe confere um paladar especial.
+    A Ecobier está disponível em quatro versões: Lager, Premium, Chopp e Pilsen.
+</div>
+<div class="container text-center">
+    <div class="row align-items-start">
+        <div class="col">
+            <img alt="lager" class="img-fluid mt-4" style="max-width: 100%;width: auto; min-width: 180px"
+                 src="{{ url_for('static', filename='lager.png') }}">
+        </div>
+        <div class="col justificar me-5">
+            <h3 class="cor_texto">LAGER</h3>
+            <div class="texto" style="letter-spacing: -1px;"> Uma cerveja puro malte, de corpo leve e produzida com uma
+                seleção
+                de maltes e lúpulos especiais, a Ecobier Lager foi pensada para permitir que a luz atravesse de forma
+                moderada sua e
+                mbalagem verde, aflorando os aromas do seu lúpulo. A garrafa de 600 ml, retornável e exclusiva da marca,
+                tem como
+                objetivo fortalecer a cadeia <span id="premium"></span> de distribuição, apostando na reutilização de sua embalagem por muitos
+                ciclos.
+                A família Lager também possui versões descartáveis Long Neck e Lata 350ml.
+            </div>
+        </div>
+        <div class="col">
+            <img class="img-fluid mt-4" alt="pilsen" style="max-width: 100%;width: auto; min-width: 180px"
+                 src="{{ url_for('static', filename='pilsen.png') }}">
+        </div>
+        <div class="col justificar">
+            <h3 class="cor_texto">PILSEN</h3>
+            <div class="texto" style="letter-spacing: -1px;">A Ecobier Pilsen é uma cerveja de alto padrão. Com
+                característica leve e cremosa, é resultado de um
+                processo tradicional de fermentação e maturação. Também utiliza em sua fórmula malte e lúpulos
+                especiais, o que lhe confere um paladar único. Ecobier é a cerveja ideal para seus momentos.
+            </div>
+
+        </div>
+    </div>
+    <div class="row align-items-start mt-5 mb-5">
+        <div class="col">
+            <img class="img-fluid mt-5" alt="premium" style="max-width: 100%;width: auto; min-width: 150px"
+                 src="{{ url_for('static', filename='premium.png') }}">
+        </div>
+        <div class="col justificar me-5">
+            <h3 class="cor_texto">PREMIUM</h3>
+            <div class="texto" style="letter-spacing: -1px;">
+                A Ecobier Premium é uma cerveja Puro Malte, produzida a partir de uma receita tradicional das cervejas
+                Pilsen europeias e com lúpulos da região de Hallertau – Alemanha, juntamente com uma seleção de maltes
+                da
+                família Pilsen. Uma cerveja autêntica, cheia de personalidade e produzida com os três tradicionais
+                ingredientes
+                da cerveja – água, malte e lúpulo. O resultado é um aroma leve, aparência brilhante e coloração dourada
+                que
+                harmoniza a doçura do malte com o amargor do lúpulo.
+            </div>
+        </div>
+        <div class="col mt-5">
+            <img class="img-fluid" alt="haller" style="max-width: 70%; margin-top: -2em;  min-width: 100px"
+                 src="{{ url_for('static', filename='haller.png') }}">
+        </div>
+        <div class="col justificar">
+            <h3 class="cor_texto">CHOPP DE VINHO</h3>
+            <div class="texto" style="letter-spacing: -1px;">
+                Haller Wine Cooler é um cooler de vinho com espírito jovem. É uma bebida gaseificada refrescante, feita
+                com as águas de alta qualidade do Circuito das Águas Paulista e uvas selecionadas, ideal para ser
+                consumida bem gelada.
+                O delicioso sabor do vinho com a cremosidade do chopp. Fardo com 12 unidades. Graduação alcoólica de
+                5,3%.
+            </div>
+            <span id="parceiros"></span>
+        </div>
+    </div>
+    <div style="margin-top: -20px; font-size: large"><span style="color:red"> Atenção: </span> Trabalhamos Somente com
+        Barril e Fardos de Chopp de Vinho!
+    </div>
+</div>
+
+<div class="container2" style="margin-top: 5em">
+    <div class="product-details">
+        <a href="https://www.google.com/maps/place/Biritas/@-16.7137225,-43.8652274,17z/data=!3m1!4b1!4m5!3m4!1s0x754ab97b68970f3:0x88a795b10f4ee0d5!8m2!3d-16.7137225!4d-43.8630387" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" style="margin-left: 3em; margin-top: -1em"
+             viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+        </svg></a>
+        <h1 style="margin-left: -70px">Biritas Bar</h1>
+        <ul style="letter-spacing: -1px;">
+            <li><p class="information me-5" style="white-space: nowrap">Aberto de segunda à segunda</p></li>
+            <li><p class="information me-5" style="white-space: nowrap;">Música ao vivo todos os dias</p></li>
+            <li><p class="information me-5" style="white-space: nowrap;">A melhor culinária e churrasco</p></li>
+            <li><p class="information me-5" style="white-space: nowrap;">Drinks 🍹 chopp 🍺 combos 🥡</p></li>
+        </ul>
+        <a href="https://api.whatsapp.com/send?phone=5538991337515" target="_blank">
+            <div style="margin-left: 40px; color:green">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                     class="bi bi-whatsapp ms-5 mt-3" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                </svg>
+            </div>
+        </a>
+        <a href="https://www.instagram.com/biritas.moc/" target="_blank" style="text-decoration: none">
+            <div style="margin-left: 110px; margin-top: -30px; color:red">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                     class="bi bi-instagram ms-5" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                </svg>
+            </div>
+        </a>
+    </div>
+
+    <div class="product-image">
+        <img src="{{ url_for('static', filename='biritas.jpg')}}" alt="Biritas">
+        <div class="info">
+            <h2 class="mt-4">Sobre o Lugar</h2>
+            <ul class="mt-4">
+                <li><strong> Espaço Aberto </strong></li>
+                <li><strong> Espaço Coberto </strong></li>
+                <li><strong> Ótimo Atendimento </strong></li>
+                <li><strong> Show ao Vivo </strong></li>
+                <li><strong> Feijoada aos Sábados </strong></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col"></div>
+    <div class="container2 alinhar col-6" style="width: 720px; margin-left: 90px">
+        <div class="product-details" style="width: 50%">
+            <a href="https://www.google.com/maps/place/Sabor+Supremum/@-16.7415577,-43.8729928,17z/data=!3m1!4b1!4m5!3m4!1s0xab5361686e3a3d:0x11425bc6e01cea6b!8m2!3d-16.7415577!4d-43.8708041" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" style="margin-top: -1em"
+             viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+        </svg></a>
+            <h1 style="margin-left:-90px;">Sabor Supremum</h1>
+            <ul style="letter-spacing: -1px;">
+                <li><p class="information me-5" style="white-space: nowrap; margin-left: -3em">Aberto de segunda à segunda</p></li>
+                <li><p class="information me-5" style="white-space: nowrap; margin-left: -7em">Restaurante</p></li>
+                <li><p class="information me-5" style="white-space: nowrap; margin-left: -5em">Grill e Choperia 🍻</p></li>
+                <li><p class="information me-5" style="white-space: nowrap; margin-left: -4em">Bar e restaurante 🍹🍴</p></li>
+            </ul>
+            <a href="https://www.instagram.com/saborsupremum/" target="_blank" style="text-decoration: none">
+                <div style="margin-left: 80px; margin-top: 32px; color:red">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                         class="bi bi-instagram ms-5" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                    </svg>
+                </div>
+            </a>
+        </div>
+
+        <div class="product-image">
+            <img src="{{ url_for('static', filename='sabor_supremum.jpg')}}" alt="Biritas">
+            <div class="info">
+                <h2 class="mt-4">Sobre o Lugar</h2>
+                <ul class="mt-5">
+                    <li><strong> Ótimo Atendimento </strong></li>
+                    <li><strong> Variedade de Porções </strong></li>
+                    <li><strong> Almoço Self-Service </strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container2" style="margin-top: 0">
+    <div class="product-details" style="width: 50%">
+        <a href="https://www.google.com/maps/place/La+Brasa+Burger+Montes+Claros/@-16.730026,-43.8732239,17z/data=!3m1!4b1!4m5!3m4!1s0xab53bc5037cd01:0x5eaf167abe2236c4!8m2!3d-16.730026!4d-43.8710352" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" style="margin-left: 80px; margin-top: -1em"
+             viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+        </svg></a>
+        <h1 style="margin-left: -90px; margin-top: -2em">La Brasa</h1>
+        <ul style="letter-spacing: -1px;">
+            <li><p class="information me-5" style="white-space: nowrap; margin-left: -2px">🍔Burgers🌭Hot Dogs🍟Porções</p>
+            </li>
+            <li><p class="information me-5" style="white-space: nowrap;">🍺Chopp🍨Sobremesas e muito ➕</p></li>
+            <li><p class="information me-5" style="white-space: nowrap; margin-left: -84px">🗓️ Fechado às Terças</p>
+            </li>
+            <li><p class="information me-5" style="white-space: nowrap; margin-left: -2px">🕧 Salão e Delivery:18:30hs à
+                00:00hs</p></li>
+            <li><p class="information me-5" style="white-space: nowrap; margin-left: -26px"> Site próprio com preços
+                menores!!</p></li>
+        </ul>
+        <a href="https://api.whatsapp.com/message/RQ5MWJOL3XXVC1?autoload=1&app_absent=0" target="_blank">
+            <div style="margin-left: 55px; color:green; margin-top: -20px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                     class="bi bi-whatsapp ms-5 mt-3" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                </svg>
+            </div>
+        </a>
+        <a href="https://www.instagram.com/labrasaburger.montesclaros/" target="_blank"
+           style="text-decoration: none; width: 0; height: 0;">
+            <div style="margin-left: 135px; color:red; margin-top: -29px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                     class="bi bi-instagram ms-5" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                </svg>
+            </div>
+        </a>
+        <a href="https://labrasaburgermontesclaros.menudino.com" target="_blank" style="text-decoration: none">
+            <div style="margin-top: -30px; margin-left: 15px">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-globe2"
+                     viewBox="0 0 16 16">
+                    <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+                </svg>
+            </div>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.MenuDino.LaBrasaBurgerOficial&pli=1" target="_blank"
+           style="text-decoration: none">
+            <div style="margin-top: -30px; margin-left: 260px; color: gray">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                     class="bi bi-google-play" viewBox="0 0 16 16">
+                    <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96 2.694-1.586Zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055l7.294-4.295ZM1 13.396V2.603L6.846 8 1 13.396ZM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27Z"/>
+                </svg>
+            </div>
+        </a>
+    </div>
+
+    <div class="product-image">
+        <img src="{{ url_for('static', filename='labrasa.png')}}" alt="Biritas">
+        <div class="info">
+            <h2 class="mt-5">Sobre o Lugar</h2>
+            <ul class="mt-5">
+                <li><strong> Espaço Aberto </strong></li>
+                <li><strong> Espaço Coberto </strong></li>
+                <li><strong> Ótimo Atendimento </strong></li>
+                <li><strong> Delivery </strong></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<span id="Onde_Encontrar"></span>
+<div class="row fundo_contatos cor">
+    <div class="col container text-center" style="margin-top: auto;margin-bottom: auto">
+        <img src="{{url_for('static', filename='Logo - Chopp Moc (para fundo verde).png')}}" width="300"
+             alt="Chopp Moc">
+    </div>
+    <div class="container text-center col">
+        <iframe class="border border-5 border-success rounded-3 m-5"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1130.6800274829102!2d-43.84537096234623!3d-16.718064588669282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x754ab3712139f83%3A0x6d0a2089c8e3638e!2sAv.%20Dulce%20Sarmento%2C%201632%20-%20Alto%20S%C3%A3o%20Jo%C3%A3o%2C%20Montes%20Claros%20-%20MG%2C%2039401-485!5e1!3m2!1spt-BR!2sbr!4v1671227203177!5m2!1spt-BR!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+
+<div class="container text-center">
+    <p class="cor_texto" style="color:#088158; font-size: 20px; font-weight: 500">Entre em contato conosco via
+        Whatsapp ou Instagram e faça seu pedido!</p>
+    <p style="color:#088158; font-size: 20px; font-weight: 900; margin-top: -30px"> ━━━━━━━━━━━━━━━━━━━━━━━━━━━ </p>
+    <p style="color:#088158; font-size: 20px; font-weight: 400; margin-top: -35px; letter-spacing: -5px">
+        ‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒ </p>
+    <a class="py-3 ms-1"
+       style="font-weight: bolder; letter-spacing: 2px;margin-top: -3px; white-space: nowrap;"
+       target="_blank"
+       href="https://wa.me/5538998606066">
+        <button style="background-color: #088158" class="circulo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                 class="bi bi-whatsapp" viewBox="0 0 16 16" style="color: white">
+                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+            </svg>
+        </button></a>
+    <a class="py-3 ms-5"
+       style="font-weight: bolder; letter-spacing: 2px;margin-top: -3px; white-space: nowrap;"
+       target="_blank"
+       href="https://www.instagram.com/choppmoc/">
+        <button style="background-color: #088158" class="circulo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                 class="bi bi-instagram" viewBox="0 0 16 16" style="color: white">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+            </svg>
+        </button></a>
+    <a class="py-3 ms-5"
+       style="font-weight: bolder; letter-spacing: 2px;margin-top: -3px; white-space: nowrap;"
+       target="_blank"
+       href="mailto:choppmoc@gmail.com">
+        <button style="background-color: #088158" class="circulo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope"
+                 viewBox="0 0 16 16" style="color:white;">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+            </svg>
+        </button></a>
+</div>
+<hr style="margin-top: 1em">
+
+{% endblock %}
