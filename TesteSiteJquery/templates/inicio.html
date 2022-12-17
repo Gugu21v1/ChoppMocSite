@@ -17,7 +17,7 @@
             <img src="{{ url_for('static', filename='barril-pilsen.jpg')}}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item" data-bs-interval="12000">
-            <img src="{{ url_for('static', filename='barril-haller.jpg')}}" class="d-block w-100" alt="...">
+            <img src="{{ url_for('static', filename='barril-haller.jpg')}}" class="d-block w-100" style="height: 952px" alt="...">
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -41,10 +41,10 @@
 <div class="container text-center">
     <div class="row align-items-start">
         <div class="col">
-            <img alt="lager" class="img-fluid mt-4" style="max-width: 100%;width: auto; min-width: 180px"
+            <img alt="lager" class="img-fluid mt-4" style="max-width: 50%;width: auto; min-width: 180px; margin-left: 12em"
                  src="{{ url_for('static', filename='lager.png') }}">
         </div>
-        <div class="col justificar me-5">
+        <div class="col justificar me-5" style="margin-top: 5em">
             <h3 class="cor_texto">LAGER</h3>
             <div class="texto" style="letter-spacing: -1px;"> Uma cerveja puro malte, de corpo leve e produzida com uma
                 seleção
@@ -52,31 +52,33 @@
                 moderada sua e
                 mbalagem verde, aflorando os aromas do seu lúpulo. A garrafa de 600 ml, retornável e exclusiva da marca,
                 tem como
-                objetivo fortalecer a cadeia <span id="premium"></span> de distribuição, apostando na reutilização de sua embalagem por muitos
+                objetivo fortalecer a cadeia <span id="pilsen"></span> de distribuição, apostando na reutilização de sua embalagem por muitos
                 ciclos.
                 A família Lager também possui versões descartáveis Long Neck e Lata 350ml.
             </div>
         </div>
+    </div>
+    <div class="row align-items-start">
         <div class="col">
-            <img class="img-fluid mt-4" alt="pilsen" style="max-width: 100%;width: auto; min-width: 180px"
+            <img class="img-fluid mt-4" alt="pilsen" style="max-width: 50%;width: auto; min-width: 180px; margin-left: 12em"
                  src="{{ url_for('static', filename='pilsen.png') }}">
         </div>
-        <div class="col justificar">
+        <div class="col justificar me-5" style="margin-top: 5em;">
             <h3 class="cor_texto">PILSEN</h3>
             <div class="texto" style="letter-spacing: -1px;">A Ecobier Pilsen é uma cerveja de alto padrão. Com
                 característica leve e cremosa, é resultado de um
                 processo tradicional de fermentação e maturação. Também utiliza em sua fórmula malte e lúpulos
                 especiais, o que lhe confere um paladar único. Ecobier é a cerveja ideal para seus momentos.
             </div>
-
+            <span id="premium"></span>
         </div>
     </div>
     <div class="row align-items-start mt-5 mb-5">
         <div class="col">
-            <img class="img-fluid mt-5" alt="premium" style="max-width: 100%;width: auto; min-width: 150px"
+            <img class="img-fluid mt-5" alt="premium" style="max-width: 50%;width: auto; min-width: 150px; margin-left: 12em"
                  src="{{ url_for('static', filename='premium.png') }}">
         </div>
-        <div class="col justificar me-5">
+        <div class="col justificar me-5" style="margin-top: 5em;">
             <h3 class="cor_texto">PREMIUM</h3>
             <div class="texto" style="letter-spacing: -1px;">
                 A Ecobier Premium é uma cerveja Puro Malte, produzida a partir de uma receita tradicional das cervejas
@@ -88,12 +90,15 @@
                 que
                 harmoniza a doçura do malte com o amargor do lúpulo.
             </div>
+            <span id="vinho"></span>
         </div>
+    </div>
+    <div class="row align-items-start mt-5 mb-5">
         <div class="col mt-5">
-            <img class="img-fluid" alt="haller" style="max-width: 70%; margin-top: -2em;  min-width: 100px"
+            <img class="img-fluid" alt="haller" style="max-width: 30%; margin-top: -2em;  min-width: 100px; margin-left: 12em"
                  src="{{ url_for('static', filename='haller.png') }}">
         </div>
-        <div class="col justificar">
+        <div class="col justificar me-5" style="margin-top: 7em;">
             <h3 class="cor_texto">CHOPP DE VINHO</h3>
             <div class="texto" style="letter-spacing: -1px;">
                 Haller Wine Cooler é um cooler de vinho com espírito jovem. É uma bebida gaseificada refrescante, feita
