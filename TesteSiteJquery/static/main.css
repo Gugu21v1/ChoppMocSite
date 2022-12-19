@@ -81,7 +81,7 @@ hr {
 	background: rgba(255, 255, 255, 0.90);
 	position: relative;
 	text-align: left;
-align-items: end;
+    align-items: end;
 	border-radius: 50px;
 	overflow: hidden;
 	height: 350px;
